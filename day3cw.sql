@@ -1,4 +1,3 @@
-
 INSERT INTO products_table1(name, category, price, in_stock) VALUES('Jeans', 'Cloth', '2499', 'No' ), 
 ('bread', 'Groceries', '80', 'Yes'), 
 ('Shoes', 'Footwear', '7499', 'Yes'),
