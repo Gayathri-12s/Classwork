@@ -9,7 +9,7 @@ CREATE TABLE employee
 
 INSERT INTO employee (Name, Department, Leave_Count)
 VALUES
-( 'Raju', 'Sales', 1),
+('Raju', 'Sales', 1),
 ('Sangeetha', 'Sales', 3),
 ('Vinay', 'Operations', 8),
 ('Abey', 'Packing', 2),
@@ -39,28 +39,28 @@ VALUES
 (10, 'Pass');
 
 
---qn 1--
+
 SELECT Name, Department, Leave_Count
 FROM employee
 WHERE Department = 'Sales' AND Leave_Count > 5;
 
---qn 2--
+
 SELECT COUNT(Name) AS no_of_employees
 FROM employee
 WHERE Department = 'Operations';
 
---qn 3--
+
 SELECT Department, COUNT(*) AS Employee_Count
 FROM employee
 GROUP BY Department;
 
---qn 4--
+
 SELECT Department, SUM(Leave_Count) AS Total_Leaves
 FROM employee
 GROUP BY Department
 HAVING SUM(Leave_Count) > 10;
 
---qn 5--
+
 
 SELECT em.Name, ex.exam_status
 FROM employee AS em 
@@ -69,7 +69,7 @@ ON em.id = ex.Employee_id
 WHERE ex.exam_status = 'Pass'
 ORDER BY em.Name ;
 
---qn 6--
+
 SELECT em.Name AS NotAttended_Exam
 FROM employee AS em
 LEFT JOIN exam AS ex
